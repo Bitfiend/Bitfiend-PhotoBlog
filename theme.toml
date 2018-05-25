@@ -1,0 +1,12 @@
+name = "Bitfiend PhotoBlog"
+license = "Apache 2.0"
+licenselink = "https://github.com/bitfiend/Bitfiend-PhotoBlog/LICENSE.md"
+description = ""
+homepage = ""
+tags = []
+features = []
+min_version = "0.38"
+
+[author]
+  name = "Bitfiend Coder"
+  homepage = "https://me.bitfiend.com"

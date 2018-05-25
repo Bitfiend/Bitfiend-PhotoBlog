@@ -1,0 +1,19 @@
+{{ define "main" }}
+    <div class="ui inverted centered medium header">
+        {{ .Title }}
+    </div>
+    <div class="ui inverted centered small header">
+        By: {{ range .Params.Authors }} {{ . }} {{end}}
+    </div>
+    <div class="ui segment">
+        {{ .Content }}
+    </div>
+    <div class="ui inverted segment meta">
+        <h3 class="ui header">Update Data:</h3>
+        <div class="ui stackable inverted secondary menu">
+            <div class="item">
+                <h4>Created: {{ .Params.CreatedDay }} {{ .Params.CreatedDate }}</h4>
+            </div>
+        </div>
+    </div>
+{{ end }}
