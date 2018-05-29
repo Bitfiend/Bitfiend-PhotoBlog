@@ -6,6 +6,6 @@ description:
 authors: []
 tags: []
 draft: true
-mainPhoto: 
-photos: []
+mainPhoto: {"title":"filename.ext"}
+photos: [{"title":"filename.ext"},]
 ---

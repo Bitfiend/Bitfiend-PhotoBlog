@@ -1,0 +1,29 @@
+{{ define "main" }}
+    <div class="ui inverted centered medium header">
+        {{ .Title }}
+    </div>
+    <div class="ui inverted centered small header">
+        By: {{ range .Params.Authors }} {{ . }} {{ end }}
+    </div>
+    <div class="ui main text container inverted segment">
+        <div class="ui sizer vertical inverted segment">
+            {{ range $title, $file := .Params.MainPhoto }}
+                <img class="ui centered medium image" src="{{$.Site.BaseURL}}albums/{{$.Params.Title}}/{{$file}}" alt="{{$title}}">
+            {{ end }}
+        </div>
+    </div>
+    <div class="ui segment">
+        {{ range .Params.Photos}}
+            {{ range $title, $file := . }} 
+                <div class="albumImage">
+                    <div class="ui centered tiny header">{{$title}}</div>
+                    <img class="ui centered small image" src="{{$.Site.BaseURL}}albums/{{$.Params.Title}}/{{$file}}" alt="{{$title}}">
+                </div>
+            {{ end }}
+        {{ end }}
+        {{.Params.Description}}
+    </div>
+    <div class="ui inverted segment meta">
+        <h3 class="ui header">Album Data:</h3>
+    </div>
+{{ end }}
