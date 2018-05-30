@@ -15,7 +15,7 @@
                             {{ .Params.CreatedDate}} | {{ .Title }} 
                         </div>
                         <div class="itemContent">
-                            {{ .Description | safeHTML | truncate 75 }}
+                            {{ .Params.Description | safeHTML | truncate 75 }}
                         </div>
                     </div>
                 </a>
