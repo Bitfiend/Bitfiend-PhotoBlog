@@ -1,4 +1,5 @@
 {{ define "main" }}
+    {{ $baseURL := .Site.BaseURL }}
     <div class="ui large centered header">
         {{ .Title }}
     </div>
@@ -8,5 +9,14 @@
         alt="{{ .Params.Description }}">
     <div class="ui segment">
         {{ .Params.Description }}
+    </div>
+    <div class="ui segment">
+        <div class="ui list horizontal">
+            {{ range .Params.Albums }}
+                <div class="item">
+                    <a href="{{ $baseURL }}album/{{ . }}">{{ . }}</a>
+                </div>
+            {{ end }}
+        </div>
     </div>
 {{ end }}
