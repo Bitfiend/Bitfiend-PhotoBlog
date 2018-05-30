@@ -4,7 +4,6 @@
         {{ .Content }}
     </div>
     <div class="ui inverted segment">
-        <h2 class="ui header">Site Updates:</h2>
         <div class="ui relaxed divided list">
             {{ $paginator := (.Paginator 5) }}
             {{ partial "pagination.html" . }}

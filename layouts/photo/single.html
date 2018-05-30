@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <div class="ui large centered header">
+        {{ .Title }}
+    </div>
+    <img
+        class="ui medium centered image " 
+        src="{{ .Site.BaseURL }}photos/{{ .Params.File }}" 
+        alt="{{ .Params.Description }}">
+    <div class="ui segment">
+        {{ .Params.Description }}
+    </div>
+{{ end }}
