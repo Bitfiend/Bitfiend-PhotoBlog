@@ -1,4 +1,5 @@
 ---
+id: {{ .Name }}
 title: {{ replace .Name "-" " " }}
 file: {{ .Name }}.ext
 createdDay: {{ now.Format "Monday" }}
